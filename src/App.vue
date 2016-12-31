@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <countdown :date="1483196400"></countdown>
+    <countdown :date="1514732400" year="2018"></countdown>
   </div>
 </template>
 

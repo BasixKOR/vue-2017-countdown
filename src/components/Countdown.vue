@@ -19,7 +19,7 @@
           </div>
       </template>
       <div class="block" v-else>
-          <p class="digit">2017</p>
+          <p class="digit">{{ year }}</p>
           <p class="text">Happy New Year</p>
       </div>
     </div>
@@ -36,6 +36,13 @@ export default {
   props: {
     date: {
       type: Number
+    },
+    year: {
+      type: String,
+      default: '2018',
+      validator: function (value) {
+        return value > new Date().getFullYear()
+      }
     }
   },
   data () {
